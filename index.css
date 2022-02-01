@@ -55,8 +55,12 @@ nav {
   padding: var(--spacing-3) 0;
 }
 
-#navbar-color {
+#header {
   background-color: #00ffbfa1;
+  width: 100%;
+}
+
+#navbar-color {
 }
 
 .navigation-items {
