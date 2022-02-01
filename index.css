@@ -65,8 +65,6 @@ nav {
 
 .navbar {
   background: #00ffbfa1;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #00ffbfa1);
-  background: linear-gradient(to right,  #bcb572, #94b32b, #00ffbfa1);
   height: 50px;
   display: flex;
   justify-content: center;
@@ -74,6 +72,7 @@ nav {
   font-size: 1.2 rem;
   position: sticky;
   top: 0;
+  border-radius: 10px;
   z-index: 100;
 }
 
@@ -162,7 +161,7 @@ a {
 }
 
 #logo {
-  margin: 10px;
+  margin: 20px;
   color: white;
   text-decoration: underline;
   display: flex;
