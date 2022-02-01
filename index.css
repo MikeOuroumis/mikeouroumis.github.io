@@ -12,6 +12,10 @@ body {
   color: #e6e6e6;
 }
 
+* {
+  margin: 5px;
+}
+
 :root {
   --spacing-1: 8px;
   --spacing-2: 12px;
@@ -56,37 +60,62 @@ nav {
 }
 
 #header {
-  background-color: #00ffbfa1;
   width: 100%;
 }
 
-#navbar-color {
+.navbar {
+  background: #00ffbfa1;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #00ffbfa1);
+  background: linear-gradient(to right,  #bcb572, #94b32b, #00ffbfa1);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navigation-items {
   display: flex;
-  list-style-type: none;
-  padding: 0;
   align-items: center;
-  margin: 0;
-  margin-left: auto;
+  justify-content: space-between;
+  height: 50px;
+  max-width: 1300px;
+  list-style: none;
+  padding: 0 50px;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .navigation-item {
   margin: var(--spacing-1);
+  height 80px;
+}
+
+.navbar_links{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125%
+  text-decoration: none;
+  height: 100%;
 }
 
 .portrait {
-  width: 300px;
+  width: 250px;
+  height: 250px;
   /*border-radius: var(--border-radius);*/
   border-radius: 100%;
-  border-color: #00ffbfa1;
-  border-style: solid;
-  flex-shrink: 0;
+  border-style: none;
+  margin: 0 20px;
 }
 
 .about-me-container {
   display: flex;
+  margin: 50px 0;
 }
 
 .about-me-text-container {
@@ -133,8 +162,13 @@ a {
 }
 
 #logo {
-  margin: 0;
-  color: #e6e6e6;
+  margin: 10px;
+  color: white;
+  text-decoration: underline;
+  display: flex;
+  align-items: center
+  z-index: 2;
+  cursor: pointer;
 }
 
 #skills-container {
@@ -157,15 +191,23 @@ a {
 }
 
 .buttons {
-  background-color: #00ffbfa1;
+  background: #00ffbfa1;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #00ffbfa1);
+  background: linear-gradient(to right,  #bcb572, #94b32b, #00ffbfa1);
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border: none;
+  outline: none;
   color: white;
+  font-weight: bold;
   padding: 15px 35px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 24px 2px;
   cursor: pointer;
   border-radius: 12px;
 }
