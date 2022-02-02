@@ -86,7 +86,7 @@ html {
 h1 {
   color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 h2 {
@@ -125,7 +125,7 @@ body {
   padding: 100px 50px;
 }
 
-.about-me-text-container {
+.hero__heading {
   margin-right: var(--spacing-3);
 }
 
@@ -210,7 +210,9 @@ section {
   left: 0;
   width: 0;
   height: 100%;
+  background: #ff7300;
   background: linear-gradient(to right, #d9ff00, #ff7300);
+  background: -webkit-linear-gradient(to right, #d9ff00, #ff7300);
   transition: all 0.35s;
   border-radius: 12px;
 }
@@ -225,7 +227,7 @@ section {
 /*hero section*/
 .hero {
   background: #000000;
-  background: linear-gradient(to left, #2c2c2c, #111111);
+  background: linear-gradient(to left, #272626, #353535);
   padding-top: 10px;
   padding-bottom: 120px;
 }
@@ -336,6 +338,7 @@ section {
 
   h1 {
     text-align: center;
+    font-size: 2.5rem;
   }
 
   .buttons {
