@@ -8,29 +8,42 @@
     <link rel="stylesheet" href="./all.min.css" />
   </head>
   <body>
-    <header id = "header">
-      <!-- Navbar Section -->
-      <nav class = "navbar">
-        <h2 id="logo">Mike Ouroumis</h2>
-        <ul class="navigation-items">
-          <li class="navigation-item"><a href="#about-me" class="navbar_links">About Me</a></li>
-          <li class="navigation-item"><a href="#projects" class="navbar_links">Projects</a></li>
-          <li class="navigation-item"><a href="#skills" class="navbar_links">Skills</a></li>
-          <li class="navigation-item"><a href="/contact.html" class="navbar_links">Contact</a></li>
+ 
+     <!-- Navbar Section -->
+     <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Mike Ouroumis</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="myskills-page">My Skills</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__links" id="portfolio-page"
+              >Portfolio</a
+            >
+          </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
+    <!-- Hero Section -->
     <main>
-      <section id="about-me">
-        <div class="about-me-container">
+      <div class = 'hero' id="home">
+        <div class="hero_container">
           <div class="about-me-text-container">
             <h1>
               Hi! I'm Mike, 
               <br>
-              I am a Front End Web Developer
+              I am Front End Web Developer
             </h1>
-            <button class = "buttons">CONTACT ME</button>
+            <button class = "buttons"><a href = "#">CONTACT ME</a></button>
           </div>
           <img
             src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/develop/resources/profile%20photo.jpg?raw=true"
@@ -108,7 +121,8 @@
       </section>
     </main>
 
-    <footer>Made with <span class="heart">♥</span> in London</footer>
+    <footer></footer>
+    <script src = 'app.js'></script>
   </body>
   <script>
     const timeContainer = document.getElementById("time-container");
