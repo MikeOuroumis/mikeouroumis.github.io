@@ -1,5 +1,5 @@
 html {
-  background-color: rgb(61, 61, 61);
+  font-size: 20px;
 }
 
 * {
@@ -28,7 +28,6 @@ html {
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -45,7 +44,7 @@ html {
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -88,6 +87,9 @@ h1 {
   font-weight: bold;
   font-size: 3.5rem;
 }
+h1.hero_text {
+  font-size: 6rem;
+}
 
 h2 {
   font-family: "Proza Libre", sans-serif;
@@ -103,47 +105,29 @@ body {
   flex-direction: column;
 }
 .portrait {
-  width: 250px;
-  height: 250px;
+  min-width: 30%;
+  min-height: 30%;
   /*border-radius: var(--border-radius);*/
   border-radius: 100%;
   border-style: none;
-  margin: 0 20px;
-  margin-left: 250px;
   float: right;
 }
 
 .hero_container {
   display: flex;
   margin: 50px 50px;
-  max-width: 1300px;
   justify-content: space-between;
-  height: 580px;
+  align-items: center;
+  min-height: 580px;
   z-index: 1;
-  width: 100%;
+  min-width: 100%;
   margin: 0 auto;
   padding: 100px 50px;
 }
 
 .hero__heading {
   margin-right: var(--spacing-3);
-}
-
-.project-image {
-  width: 50%;
-}
-
-.project-title h3 {
-  display: inline;
-}
-
-details {
-  cursor: pointer;
-}
-
-summary {
-  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
-  color: azure;
+  color: white;
 }
 
 footer {
@@ -162,22 +146,9 @@ section {
   margin: 0 var(--spacing-1);
 }
 
-#skills-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#skills-container > * {
-  font-size: 2em;
-  width: 2em;
-  margin-top: var(--spacing-1);
-}
-
 .buttons {
   background: #00ffbfa1;
-  background: -webkit-linear-gradient(to right, #67ff01, #00ffbf);
+  background: -webkit-linear-gradient(to right, #00ff88, #00ffbf);
   background: linear-gradient(to right, #00ff88, #00ffbf);
   transition: all 0.3s ease;
   align-items: center;
@@ -227,10 +198,376 @@ section {
 /*hero section*/
 .hero {
   background: #000000;
-  background: linear-gradient(to left, #272626, #353535);
+  background: linear-gradient(to right, #141414, #424242);
   padding-top: 10px;
   padding-bottom: 120px;
 }
+
+/* Portfolio Section*/
+.portfolio_container {
+  margin: auto 50px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: auto 0;
+}
+
+.gallery_item {
+  width: 100%;
+  height: 100%;
+}
+
+.desc {
+  text-align: center;
+  color: white;
+}
+
+.portfolio_card {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #000000e3;
+}
+
+.image_text {
+  color: #00ffbf;
+  font-size: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.portfolio_card:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio_heading {
+  padding-top: 50px;
+  text-align: center;
+}
+.portfolio_wrapper {
+  padding-top: 50px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.portfolio_section_class {
+  background: -webkit-linear-gradient(to left, #018849, #01916d);
+  background: linear-gradient(to left, #018849, #01916d);
+  padding-bottom: 50px;
+}
+
+#portfolio_paragraph {
+  color: rgb(214, 214, 214);
+  font-size: 2rem;
+  padding-top: 5px;
+}
+
+/*About Section*/
+.about_me_section_class {
+  background-color: rgb(158, 158, 158);
+  padding: 10rem 25px;
+}
+
+.about_me_section_class h1 {
+  text-align: center;
+  color: black !important;
+  padding-bottom: 20px;
+}
+
+.about_me_paragraph {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.about_me_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  height: 90%;
+  z-index: 1;
+  width: 100%;
+  padding: 50px 25px;
+}
+
+#soft_skills {
+  padding-top: 25px;
+}
+
+/*skills bar*/
+
+#skills_header {
+  color: #000000;
+}
+
+::selection {
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars {
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar {
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: -webkit-linear-gradient(to left, #00ff88, #00ffbf);
+  background: linear-gradient(to left, #00ff88, #00ffbf);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.bar .progress-line.html span {
+  width: 90%;
+}
+.bar .progress-line.css span {
+  width: 80%;
+}
+.bar .progress-line.jquery span {
+  width: 85%;
+}
+.bar .progress-line.ReactJS span {
+  width: 70%;
+}
+.bar .progress-line.python span {
+  width: 50%;
+}
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after {
+  content: "80%";
+}
+.progress-line.jquery span::after {
+  content: "85%";
+}
+.progress-line.ReactJS span::after {
+  content: "70%";
+}
+.progress-line.python span::after {
+  content: "40%";
+}
+
+/*Soft Skills Bar*/
+
+#skills_header {
+  color: #000000;
+}
+
+::selection {
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars {
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar {
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*soft skills*/
+.skill-bars .bar .progress-line-soft-skills {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line-soft-skills span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(to right, #00c3ff, #2f00ff);
+  background: -webkit-linear-gradient(to right, #00c3ff, #ff7300);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.bar .progress-line-soft-skills.communication span {
+  width: 100%;
+}
+.bar .progress-line-soft-skills.creativity span {
+  width: 100%;
+}
+.bar .progress-line-soft-skills.adaptivity span {
+  width: 100%;
+}
+.bar .progress-line-soft-skills.problem-solving span {
+  width: 100%;
+}
+.bar .progress-line-soft-skills.empathy span {
+  width: 100%;
+}
+.progress-line-soft-skills span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line-soft-skills span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line-soft-skills.communication span::after {
+  content: "100%";
+}
+.progress-line-soft-skills.creativity span::after {
+  content: "100%";
+}
+.progress-line-soft-skills.adaptivity span::after {
+  content: "100%";
+}
+.progress-line-soft-skills.problem-solving span::after {
+  content: "100%";
+}
+.progress-line-soft-skills.empathy span::after {
+  content: "100%";
+}
+
+/* 960px max-width */
 
 @media screen and (max-width: 960px) {
   .navbar__container {
@@ -239,7 +576,6 @@ section {
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
     padding: 0;
   }
 
@@ -330,6 +666,10 @@ section {
     justify-content: center;
   }
 
+  .hero__heading {
+    font-size: 1rem;
+  }
+
   .portrait {
     display: block;
     margin-left: auto;
@@ -341,9 +681,34 @@ section {
     font-size: 2.5rem;
   }
 
+  h1.hero_text {
+    font-size: 3rem;
+  }
+
   .buttons {
     text-align: center;
     margin: 20px auto;
     display: block;
   }
+
+  .portfolio_wrapper {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about_me_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 25px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
 }

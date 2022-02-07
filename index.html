@@ -26,19 +26,21 @@
           </li>
           <li class="navbar__item">
             <a href="#services" class="navbar__links" id="portfolio-page"
-              >Portfolio</a
-            >
+              >Portfolio
+            </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+
     <main>
+
+      <!-- Hero Section -->
       <div class = 'hero' id="home">
         <div class="hero_container">
           <div class="hero__heading">
-            <h1>
+            <h1 class="hero_text">
               Hi! I'm Mike, 
               <br>
               I am Front End Web Developer
@@ -51,74 +53,195 @@
             class="portrait"
           />
         </div>
-      </section>
+      </div>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The first computer program</h3>
-          </summary>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg"
-            alt="Lovelace's diagram from note G, the first published computer
-          algorithm"
-            class="project-image"
-          />
-          <p class="project-description">
-            The world's first computer program for computing Bernoulli numbers.
-          </p>
-        </details>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The Analytical Engine</h3>
-          </summary>
-          <img
-            src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb"
-            alt="An original model of part of the Analytical Engine"
-            class="project-image"
-          />
-          <p class="project-description">
-            I helped Charles Babbage on topics ranging from math to computation
-            that helped the development of the Analytical Engine.
-          </p>
-        </details>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The Ada programming language</h3>
-          </summary>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png"
-            alt='Ada mascot, a black and cobalt blue hummingbird, flying above the
-          slogan "Time-tested, safe and secure"'
-            class="project-image"
-          />
-          <p class="project-description">
-            My work inspired the United States Department of Defense to name
-            their new programming language after me.
-          </p>
-        </details>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div id="skills-container">
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js"></i>
-          <i class="fab fa-react"></i>
-          <i class="fab fa-aws"></i>
-          <i class="fab fa-sketch"></i>
-          <i class="fab fa-figma"></i>
-          <i class="fab fa-git"></i>
-          <i class="fab fa-chrome"></i>
-          <i class="fas fa-terminal"></i>
-          <i class="fas fa-universal-access"></i>
-          <i class="fab fa-npm"></i>
-          <i class="fab fa-node"></i>
-          <i class="fab fa-github"></i>
+      <!-- Portfolio Section -->
+      <div class = 'portfolio_section_class' id="portfolio">
+        <div class="portfolio_container">
+          <div class="portfolio_heading">
+            <h1>
+              My Portfolio
+            </h1>
+            <p id = "portfolio_paragraph">A small gallery of some of my projects.</p>
+          </div>
+            
+            <div class="portfolio_wrapper">
+              <div class="portfolio_card">
+                <a target="_blank" href="https://calisthenicsassociation.org/">
+                  <img class= "gallery_item" src="C:\Users\Mike\Downloads\portfolio_item_1.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class = "overlay">
+                  <div class = "image_text">Calisthenics Association</div>
+                </div>
+              </div>
+                      
+              <div class="portfolio_card">
+                <a target="_blank" href="https://fitnovation.gr/">
+                  <img class= "gallery_item" src="C:\Users\Mike\Downloads\portfolio_item_2.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class = "overlay">
+                  <div class = "image_text">Fitnovation</div>
+                </div>
+              </div>
+            
+              <div class="portfolio_card">
+                <a target="_blank" href="https://github.com/MikeOuroumis/Quiz-App">
+                  <img class= "gallery_item" src="C:\Users\Mike\Downloads\portfolio_item_3.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class = "overlay">
+                  <div class = "image_text">ReactJS Quiz App</div>
+              </div>
+              </div>
+            
+              <div class="portfolio_card">
+                <a target="_blank" href="https://store.steampowered.com/app/850690/Crying_is_not_Enough_Remastered/">
+                  <img class= "gallery_item" src="C:\Users\Mike\Downloads\portfolio_item_6.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class = "overlay">
+                  <div class = "image_text"> Crying Is Not Enough</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <!-- About Me Section -->
+      <div class = 'about_me_section_class' id="about_me">
+        <h1>
+          About Me
+        </h1>
+        <div class="about_me_container">
+
+          <!-- Skills Section -->
+          <div class = "skills-bars-container">
+            <h2 id = 'skills_header'>Skills</h2>
+            <br>
+            <div class="skill-bars">
+              <div class="bar">
+                <div class="info">
+                  <span>HTML</span>
+                </div>
+                <div class="progress-line html">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>CSS</span>
+                </div>
+                <div class="progress-line css">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Javascript</span>
+                </div>
+                <div class="progress-line jquery">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>ReactJS</span>
+                </div>
+                <div class="progress-line ReactJS">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Python</span>
+                </div>
+                <div class="progress-line python">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+                      <!-- Soft Skills -->
+          <div id="soft_skills">
+            <h2 id = 'skills_header'>Soft Skills</h2>
+            <br>
+            <div class="skill-bars">
+              <div class="bar">
+                <div class="info">
+                  <span>Communication</span>
+                </div>
+                <div class="progress-line-soft-skills communication">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Creativity</span>
+                </div>
+                <div class="progress-line-soft-skills creativity">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Adaptivity</span>
+                </div>
+                <div class="progress-line-soft-skills adaptivity">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Problem Solving</span>
+                </div>
+                <div class="progress-line-soft-skills problem-solving">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span>Empathy</span>
+                </div>
+                <div class="progress-line-soft-skills empathy">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="about_me_paragraph"> 
+            <p>
+              
+              <br>
+              <br>
+              Back in 2013, I started as a game programmer for the 3D Action-Adventure video game "Crying Is Not Enough".
+              <br>
+              <br>
+              I built most of the mechanics of the game using Javascript and C# and dealt with UI, Physics, 3Ds, Animations, etc.
+              <br>
+              <br>
+              In 2015 I started a 2-year "Computer Science" program in "Public Vocational Training Institute" and expanded my knowledge
+               around computers and programming.
+              <br>
+              <br>
+              In 2019 I started my own gym. One of my main tasks was to build and maintain a fully functional website that would make our 
+lives and the users' lives easier. I created a wordpress page that had a lot of features such as online booking, 
+a subscription system, and a lot of automation systems that replaced the time-consuming tasks. Anyone could do 
+anything without a call. The users could book an appointment, buy a subscription online, learn everything about our programs and pass all the data that we needed without extra work for the receptionist. Our website was one of the reasons for success!
+
+              <br>
+              <br>
+              In 2021 I started an educational-oriented online business named "Calisthenics Association". I created a subscription-based online platform with courses, the same concept as Udemy and Coursera, but for specific content.
+              Today managing only online businesses, I am more focused on front-end web development, which is something that I love. By automating my work, I reserve a good amount of time to keep learning new technologies around web development.
+              I enjoy creating web applications in Javascript and ReactJ, using HTML, CSS, and Bootstrap.
+              I am passionate about web development. I am willing to engage in new projects, offer my knowledge, and get more experience by collaborating with the members of a team!
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+
     </main>
 
     <footer></footer>
