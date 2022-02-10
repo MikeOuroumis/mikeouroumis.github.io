@@ -135,8 +135,8 @@ body {
 /*hero section*/
 .hero {
   background: #000000;
-  background: linear-gradient(to right, #141414, #424242);
-  background: -webkit-linear-gradient(to right, #141414, #424242);
+  background: linear-gradient(to bottom, #141414, #424242);
+  background: -webkit-linear-gradient(to bottom, #141414, #424242);
   padding-top: 10px;
   padding-bottom: 120px;
 }
@@ -184,7 +184,7 @@ body {
 .buttons a {
   position: relative;
   z-index: 2;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -208,7 +208,7 @@ body {
 
 /*About Section*/
 .about_me_section_class {
-  background-color: rgb(80, 80, 80);
+  background-color: #424242;
   padding: 50px 25px;
 }
 
@@ -347,6 +347,10 @@ body {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+.skills-bars-container h3,
+.skill-bars {
+  margin: auto 10px;
+}
 .skill-bars .bar {
   margin: 20px 0;
 }
@@ -461,7 +465,8 @@ body {
 
 .about_me_section_class p {
   color: #fff;
-  font-weight: lighter;
+  font-weight: 300 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
 }
 
@@ -561,7 +566,8 @@ textarea {
 .skills-bars-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*Contact Form*/
