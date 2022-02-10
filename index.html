@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mike's Portfolio</title>
     <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./all.min.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <script src="https://kit.fontawesome.com/3f8a208811.js" crossorigin="anonymous"></script>
   </head>
   <body>
  
@@ -21,15 +19,19 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#home" class="navbar__links" id="about-page">About</a>
+            <a href="#about_me" class="navbar_links" id="about-page">About Me</a>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="myskills-page">My Skills</a>
+            <a href="#portfolio" class="navbar_links" id="myskills-page">Portfolio</a>
           </li>
           <li class="navbar__item">
-            <a href="#services" class="navbar__links" id="portfolio-page"
-              >Portfolio
+            <a href="#contact" class="navbar_links" id="portfolio-page"
+              >Contact Me
             </a>
+          </li>
+          <li class = "social_links_container">            
+            <a class="navbar__item" id="social_links" href="https://www.linkedin.com/in/michalis-ouroumis-76676022b/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="navbar__item" id="social_links" href="https://github.com/MikeOuroumis"><i class="fab fa-github"></i></a>
           </li>
         </ul>
       </div>
@@ -47,7 +49,7 @@
               <br>
               I am Front End Web Developer
             </h1>
-            <button class = "buttons"><a href = "#">CONTACT ME</a></button>
+            <button class = "buttons"><a href = "#contact">Contact me!</a></button>
           </div>
           <img
             src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/develop/resources/profile%20photo.jpg?raw=true"
@@ -57,69 +59,17 @@
         </div>
       </div>
 
-      <!-- Portfolio Section -->
-      <div class = 'portfolio_section_class' id="portfolio">
-        <div class="portfolio_container">
-          <div class="portfolio_heading">
-            <h1>
-              My Portfolio
-            </h1>
-            <p id = "portfolio_paragraph">A small gallery of some of my projects.</p>
-          </div>
-            
-            <div class="portfolio_wrapper">
-              <div class="portfolio_card">
-                <a target="_blank" href="https://calisthenicsassociation.org/">
-                  <img class= "gallery_item" src="https://raw.githubusercontent.com/MikeOuroumis/mikeouroumis.github.io/main/resources/portfolio_item_1.jpg" alt="Calisthenics Association Project" width="600" height="400">
-                <div class = "overlay">
-                  <div class = "image_text">Calisthenics Association</div>
-                </div>
-              </a>
-              </div>
-                      
-              <div class="portfolio_card">
-                <a target="_blank" href="https://fitnovation.gr/">
-                  <img class= "gallery_item" src="https://raw.githubusercontent.com/MikeOuroumis/mikeouroumis.github.io/main/resources/portfolio_item_2.jpg" alt="Fitnovation Project" width="600" height="400">
-                  <div class = "overlay">
-                  <div class = "image_text">Fitnovation</div>
-                </div>
-                </a>
-              </div>
-            
-              <div class="portfolio_card">
-                <a target="_blank" href="https://github.com/MikeOuroumis/Quiz-App">
-                  <img class= "gallery_item" src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/main/resources/portfolio_item_3.jpg?raw=true" alt="ReactJS Quiz App" width="600" height="400">
-                  <div class = "overlay">
-                    <div class = "image_text">ReactJS Quiz App</div>
-                  </div>
-                </a>
-
-              </div>
-            
-              <div class="portfolio_card">
-                <a target="_blank" href="https://store.steampowered.com/app/850690/Crying_is_not_Enough_Remastered/">
-                  <img class= "gallery_item" src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/main/resources/portfolio_item_6.jpg?raw=true" alt="Crying is not Enough" width="600" height="400">
-                
-                  <div class = "overlay">
-                    <div class = "image_text">Crying Is Not Enough</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- About Me Section -->
       <div class = 'about_me_section_class' id="about_me">
-        <h1>
+        <h2>
           About Me
-        </h1>
+        </h2>
         <div class="about_me_container">
 
           <!-- Skills Section -->
           <div class = "skills-bars-container">
-            <h2 id = 'skills_header'>Skills</h2>
+            <h3 id = 'skills_header'>Skills</h3>
             <br>
             <div class="skill-bars">
               <div class="bar">
@@ -163,9 +113,10 @@
                 </div>
               </div>
             </div>
-                      <!-- Soft Skills -->
+          
+          <!-- Soft Skills -->
           <div id="soft_skills">
-            <h2 id = 'skills_header'>Soft Skills</h2>
+            <h3 id = 'skills_header'>Soft Skills</h3>
             <br>
             <div class="skill-bars">
               <div class="bar">
@@ -244,46 +195,71 @@ anything without a call. The users could book an appointment, buy a subscription
 
         </div>
       </div>
-      <div class="container">
-        <form action="contactform.php">
+
       
-          <label for="fname">Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Email</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your email..">
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
+      <!-- Portfolio Section -->
+      <div class = 'portfolio_section_class' id="portfolio">
+        <div class="portfolio_container">
+          <div class="portfolio_heading">
+            <h2>
+              My Portfolio
+            </h2>
+            <p id = "portfolio_paragraph">A small gallery of some of my projects.</p>
+          </div>
+            
+            <div class="portfolio_wrapper">
+              <div class="portfolio_card">
+                <a target="_blank" href="https://calisthenicsassociation.org/">
+                  <img class= "gallery_item" src="https://raw.githubusercontent.com/MikeOuroumis/mikeouroumis.github.io/main/resources/portfolio_item_1.jpg" alt="Calisthenics Association Project" width="600" height="400">
+                <div class = "overlay">
+                  <div class = "image_text">Calisthenics Association</div>
+                </div>
+              </a>
+              </div>
+                      
+              <div class="portfolio_card">
+                <a target="_blank" href="https://fitnovation.gr/">
+                  <img class= "gallery_item" src="https://raw.githubusercontent.com/MikeOuroumis/mikeouroumis.github.io/main/resources/portfolio_item_2.jpg" alt="Fitnovation Project" width="600" height="400">
+                  <div class = "overlay">
+                  <div class = "image_text">Fitnovation</div>
+                </div>
+                </a>
+              </div>
+            
+              <div class="portfolio_card">
+                <a target="_blank" href="https://github.com/MikeOuroumis/Quiz-App">
+                  <img class= "gallery_item" src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/main/resources/portfolio_item_3.jpg?raw=true" alt="ReactJS Quiz App" width="600" height="400">
+                  <div class = "overlay">
+                    <div class = "image_text">ReactJS Quiz App</div>
+                  </div>
+                </a>
+
+              </div>
+            
+              <div class="portfolio_card">
+                <a target="_blank" href="https://store.steampowered.com/app/850690/Crying_is_not_Enough_Remastered/">
+                  <img class= "gallery_item" src="https://github.com/MikeOuroumis/mikeouroumis.github.io/blob/main/resources/portfolio_item_6.jpg?raw=true" alt="Crying is not Enough" width="600" height="400">
+                
+                  <div class = "overlay">
+                    <div class = "image_text">Crying Is Not Enough</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <form action="https://formspree.io/f/mbjwgwda" method = "POST"><input type="email" name="_replyto"><textarea   name="body"></textarea><input type="submit" value="Send"></form>
-
-
+      <form action="https://formspree.io/f/mbjwgwda" method = "POST" class="form_container">
+        <h2 id="contact">Contact Me</h2>
+        <input type="Name" name="Name" placeholder="Name">
+        <input type="email" name="Email" placeholder="Email">
+        <textarea name="body" placeholder="Message"></textarea>
+        <button class = "buttons" type="submit" value="Send"><a>Send message!</a></button>
+      </form>
     </main>
 
-    <footer><div>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div></footer>
+    <footer style="background-color: black;">
+      
     <script src = 'app.js'></script>
   </body>
-  <script>
-    const timeContainer = document.getElementById("time-container");
-    const BIRTH_DAY = "12-10-1815";
-    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
-    const intlNumberFormatter = new Intl.NumberFormat("en-US");
-
-    setInterval(() => {
-      const now = new Date();
-      const difference = Math.floor(
-        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
-      );
-
-      timeContainer.innerText = intlNumberFormatter.format(difference);
-    }, 1000);
-  </script>
 </html>

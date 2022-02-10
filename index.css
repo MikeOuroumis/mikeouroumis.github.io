@@ -1,12 +1,13 @@
 html {
   font-size: 20px;
+  font-family: "Proza Libre", sans-serif;
+  padding: 0;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -44,7 +45,7 @@ html {
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -58,7 +59,7 @@ html {
   height: 80px;
 }
 
-.navbar__links {
+.navbar_links {
   color: #fff;
   display: flex;
   align-items: center;
@@ -69,15 +70,32 @@ html {
   transition: all 0.3s ease;
 }
 
-.navbar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  width: 100%;
+.navbar_links:hover {
+  color: #00ffbf;
+  transition: all 0.3s ease;
 }
 
-.navbar__links:hover {
+.social_links_container {
+  padding: 5px 15px;
+  border-radius: 12px;
+  margin-left: 10px;
+  border-color: #fff;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.social_icons {
+  color: #fff;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+}
+
+#social_links {
+  color: #fff;
+  padding: 0 15px;
+}
+
+.social_icons:hover {
   color: #00ffbf;
   transition: all 0.3s ease;
 }
@@ -85,25 +103,36 @@ html {
 h1 {
   color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 3.5rem;
-}
-h1.hero_text {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 h2 {
-  font-family: "Proza Libre", sans-serif;
+  color: #fff;
   margin: 0;
-  margin-bottom: var(--spacing-2);
+  padding: 25px 0;
+  font-size: 3rem;
+}
+
+h3 {
+  color: #fff;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+
+/*hero section*/
+.hero {
+  background: #000000;
+  background: linear-gradient(to right, #141414, #424242);
+  background: -webkit-linear-gradient(to right, #141414, #424242);
+  padding-top: 10px;
+  padding-bottom: 120px;
+}
+
 .portrait {
   min-width: 30%;
   min-height: 30%;
@@ -125,27 +154,6 @@ body {
   padding: 100px 50px;
 }
 
-.hero__heading {
-  margin-right: var(--spacing-3);
-  color: white;
-}
-
-footer {
-  margin-top: auto;
-  padding: var(--spacing-2) 0;
-  text-align: center;
-}
-
-section {
-  padding: var(--spacing-3) 0;
-}
-
-.icon {
-  font-size: 2em;
-  color: var(--font-color);
-  margin: 0 var(--spacing-1);
-}
-
 .buttons {
   background: #00ffbfa1;
   background: -webkit-linear-gradient(to right, #00ff88, #00ffbf);
@@ -157,20 +165,18 @@ section {
   border-radius: 12px;
   cursor: pointer;
   position: relative;
-  outline: none;
-  font-weight: bold;
+  font-family: Roboto, sans-serif;
   padding: 15px 35px;
   text-align: center;
-  text-decoration: none;
   display: flex;
-  font-size: 16px;
-  margin: 24px 2px;
+  font-size: 26px;
+  margin: 25px 2px;
 }
 
 .buttons a {
   position: relative;
   z-index: 2;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -181,117 +187,25 @@ section {
   left: 0;
   width: 0;
   height: 100%;
-  background: #ff7300;
-  background: linear-gradient(to right, #d9ff00, #ff7300);
-  background: -webkit-linear-gradient(to right, #d9ff00, #ff7300);
+  background: #00b7ff;
+  background: linear-gradient(to left, #00b7ff, #96f8ff);
+  background: -webkit-linear-gradient(to left, #00b7ff, #96f8ff);
   transition: all 0.35s;
   border-radius: 12px;
-}
-
-.button:hover {
-  color: rgb(0, 0, 0);
 }
 
 .buttons:hover:after {
   width: 100%;
 }
-/*hero section*/
-.hero {
-  background: #000000;
-  background: linear-gradient(to right, #141414, #424242);
-  padding-top: 10px;
-  padding-bottom: 120px;
-}
-
-/* Portfolio Section*/
-.portfolio_container {
-  margin: auto 50px;
-  z-index: 1;
-  width: 100%;
-  margin: 0 auto;
-  padding: auto 0;
-}
-
-.gallery_item {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.desc {
-  text-align: center;
-  color: white;
-}
-
-.portfolio_card {
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  cursor: pointer;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #000000e3;
-}
-
-.image_text {
-  color: #00ffbf;
-  font-size: 2rem;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-weight: bold;
-}
-
-.portfolio_card:hover .overlay {
-  opacity: 1;
-}
-
-.portfolio_heading {
-  padding-top: 50px;
-  text-align: center;
-}
-.portfolio_wrapper {
-  padding-top: 50px;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.portfolio_section_class {
-  background: -webkit-linear-gradient(to left, #018849, #01916d);
-  background: linear-gradient(to left, #018849, #01916d);
-  padding-bottom: 50px;
-}
-
-#portfolio_paragraph {
-  color: rgb(214, 214, 214);
-  font-size: 2rem;
-  padding-top: 5px;
-}
 
 /*About Section*/
 .about_me_section_class {
-  background-color: rgb(158, 158, 158);
-  padding: 10rem 25px;
+  background-color: rgb(80, 80, 80);
+  padding: 50px 25px;
 }
 
-.about_me_section_class h1 {
-  text-align: center;
-  color: black !important;
-  padding-bottom: 20px;
+.about_me_section_class h2 {
+  padding: 0 25px;
 }
 
 .about_me_paragraph {
@@ -314,10 +228,6 @@ section {
 }
 
 /*skills bar*/
-
-#skills_header {
-  color: #000000;
-}
 
 ::selection {
   color: #fff;
@@ -441,11 +351,6 @@ section {
 }
 
 /*Soft Skills Bar*/
-
-#skills_header {
-  color: #000000;
-}
-
 ::selection {
   color: #fff;
   background: #6665ee;
@@ -503,7 +408,7 @@ section {
   transform: scaleX(0);
   transform-origin: left;
   background: linear-gradient(to right, #00c3ff, #2f00ff);
-  background: -webkit-linear-gradient(to right, #00c3ff, #ff7300);
+  background: -webkit-linear-gradient(to right, #00c3ff, #2f00ff);
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 .bar .progress-line-soft-skills.communication span {
@@ -569,9 +474,117 @@ section {
   content: "100%";
 }
 
+.about_me_section_class p {
+  color: #fff;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* Portfolio Section*/
+.portfolio_container {
+  margin: auto 50px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: auto 0;
+}
+
+.gallery_item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.portfolio_card {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #000000e3;
+}
+
+.image_text {
+  color: #00ffbf;
+  font-size: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.portfolio_card:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio_heading {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.portfolio_wrapper {
+  padding-top: 50px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.portfolio_section_class {
+  background: -webkit-linear-gradient(to left, #018849, #01916d);
+  background: linear-gradient(to left, #018849, #01916d);
+  padding-bottom: 50px;
+}
+
+#portfolio_paragraph {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding-top: 5px;
+}
+#contact {
+  color: black !important;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type="name"],
+input[type="email"],
+select,
+textarea {
+  width: 60%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  display: grid;
+}
+
+/*Contact Form*/
+form {
+  padding: 25px 50px;
+}
+
+input {
+  padding: 0 20px;
+}
+
 /* 960px max-width */
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -619,9 +632,10 @@ section {
     width: 100%;
   }
 
-  .navbar__links {
+  .navbar_links {
     text-align: center;
-    padding: 2rem;
+    font-size: 0.8em;
+    padding: 1.5rem;
     width: 100%;
     display: table;
   }
@@ -676,14 +690,12 @@ section {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-height: 80%;
+    max-width: 80%;
   }
 
   h1 {
     text-align: center;
-    font-size: 2.5rem;
-  }
-
-  h1.hero_text {
     font-size: 3rem;
   }
 
@@ -710,7 +722,155 @@ section {
     width: 100%;
     padding: 50px 25px;
   }
-}
+  .social_links_container {
+    text-align: center;
+  }
 
-@media screen and (max-width: 1200px) {
+  /*skills bar*/
+
+  .skill-bars {
+    padding: 25px 30px;
+    width: auto;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: grid;
+  }
+  .skill-bars .bar {
+    margin: 10px 0;
+  }
+  .skill-bars .bar:first-child {
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info {
+    margin-bottom: 5px;
+  }
+
+  .skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100% {
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+      0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: -webkit-linear-gradient(to left, #00ff88, #00ffbf);
+    background: linear-gradient(to left, #00ff88, #00ffbf);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  .bar .progress-line.html span {
+    width: 90%;
+  }
+  .bar .progress-line.css span {
+    width: 80%;
+  }
+  .bar .progress-line.jquery span {
+    width: 85%;
+  }
+  .bar .progress-line.ReactJS span {
+    width: 70%;
+  }
+  .bar .progress-line.python span {
+    width: 50%;
+  }
+
+  .progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+    z-index: 0;
+  }
+  @keyframes showText2 {
+    100% {
+      opacity: 1;
+    }
+  }
+  .progress-line.html span::after {
+    content: "90%";
+  }
+  .progress-line.css span::after {
+    content: "80%";
+  }
+  .progress-line.jquery span::after {
+    content: "85%";
+  }
+  .progress-line.ReactJS span::after {
+    content: "70%";
+  }
+  .progress-line.python span::after {
+    content: "40%";
+  }
+
+  .form_container {
+    display: grid;
+    justify-content: center;
+  }
+  /* Style inputs with type="text", select elements and textareas */
+  input[type="name"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    display: grid;
+  }
+
+  .skills-bars-container {
+    justify-content: center;
+    max-width: 100%;
+  }
 }
