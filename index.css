@@ -707,14 +707,30 @@ input {
     font-size: 3rem;
   }
 
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
   .buttons {
     text-align: center;
     margin: 20px auto;
     display: block;
   }
 
+  .portfolio_heading {
+    padding: 0;
+  }
+  #portfolio_paragraph {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    padding-top: 5px;
+    text-align: center;
+  }
+
   .portfolio_wrapper {
     padding-top: 50px;
+    padding-left: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
