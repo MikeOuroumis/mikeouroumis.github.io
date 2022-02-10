@@ -94,6 +94,12 @@ html {
 #social_links {
   color: #fff;
   padding: 0 15px;
+  transition: all 0.3s ease;
+}
+
+#social_links:hover {
+  color: #00b7ff;
+  transition: all 0.3s ease;
 }
 
 .social_icons:hover {
@@ -224,16 +230,11 @@ body {
 
 .about_me_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  height: 90%;
+  height: 100%;
   z-index: 1;
   width: 100%;
   padding: 50px 25px;
-}
-
-#soft_skills {
-  padding-top: 25px;
 }
 
 /*skills bar*/
@@ -242,33 +243,7 @@ body {
   color: #fff;
   background: #6665ee;
 }
-.skill-bars {
-  padding: 25px 30px;
-  width: 600px;
-  background: #fff;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-.skill-bars .bar {
-  margin: 20px 0;
-}
-.skill-bars .bar:first-child {
-  margin-top: 0px;
-}
-.skill-bars .bar .info {
-  margin-bottom: 5px;
-}
-.skill-bars .bar .info span {
-  font-weight: 500;
-  font-size: 17px;
-  opacity: 0;
-  animation: showText 0.5s 1s linear forwards;
-}
-@keyframes showText {
-  100% {
-    opacity: 1;
-  }
-}
+
 .skill-bars .bar .progress-line {
   height: 10px;
   width: 100%;
@@ -281,6 +256,7 @@ body {
     0 1px rgba(255, 255, 255, 0.8);
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
+
 @keyframes animate {
   100% {
     transform: scaleX(1);
@@ -486,8 +462,7 @@ body {
 .about_me_section_class p {
   color: #fff;
   font-weight: lighter;
-  font-style: italic;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 /* Portfolio Section*/
@@ -544,7 +519,6 @@ body {
 
 .portfolio_heading {
   padding-top: 50px;
-  padding-left: 50px;
 }
 .portfolio_wrapper {
   padding-top: 50px;
@@ -583,6 +557,11 @@ textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   display: grid;
+}
+.skills-bars-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*Contact Form*/
@@ -725,6 +704,10 @@ input {
   h3 {
     font-size: 1rem;
   }
+  .about_me_paragraph p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 
   .buttons {
     text-align: center;
@@ -773,7 +756,6 @@ input {
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    display: grid;
   }
   .skill-bars .bar {
     margin: 10px 0;
@@ -888,6 +870,10 @@ input {
     content: "40%";
   }
 
+  #soft_skills {
+    padding-top: 25px;
+  }
+
   .image_text {
     color: #00ffbf;
     font-size: 1rem;
@@ -927,5 +913,6 @@ input {
   .skills-bars-container {
     justify-content: center;
     max-width: 100%;
+    display: block;
   }
 }
