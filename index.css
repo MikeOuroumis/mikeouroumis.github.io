@@ -112,6 +112,7 @@ h2 {
   margin: 0;
   padding: 25px 0;
   font-size: 3rem;
+  text-align: center;
 }
 
 h3 {
@@ -169,9 +170,9 @@ body {
   font-family: Roboto, sans-serif;
   padding: 15px 35px;
   text-align: center;
-  display: flex;
   font-size: 26px;
-  margin: 25px 2px;
+  margin: 25px auto;
+  max-width: 300px;
 }
 
 .buttons a {
@@ -561,6 +562,7 @@ body {
   color: rgb(255, 255, 255);
   font-size: 1rem;
   padding-top: 5px;
+  text-align: center;
 }
 #contact {
   color: black !important;
@@ -570,8 +572,10 @@ input[type="name"],
 input[type="email"],
 select,
 textarea {
-  width: 60%; /* Full width */
+  width: 80%; /* Full width */
   padding: 12px; /* Some padding */
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -584,6 +588,9 @@ textarea {
 /*Contact Form*/
 form {
   padding: 25px 50px;
+}
+.form_container {
+  display: grid;
 }
 
 input {
@@ -707,11 +714,11 @@ input {
 
   h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -723,7 +730,7 @@ input {
     text-align: center;
     margin: 20px auto;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .portfolio_heading {
@@ -893,10 +900,7 @@ input {
     text-align: center;
     font-weight: bold;
   }
-  .form_container {
-    display: grid;
-    justify-content: center;
-  }
+
   /* Style inputs with type="text", select elements and textareas */
   input[type="name"],
   input[type="email"],
@@ -911,6 +915,13 @@ input {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     display: grid;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form_container {
+    display: grid;
+    justify-content: center;
   }
 
   .skills-bars-container {
