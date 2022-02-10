@@ -2,6 +2,7 @@ html {
   font-size: 20px;
   font-family: "Proza Libre", sans-serif;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -202,6 +203,13 @@ body {
 .about_me_section_class {
   background-color: rgb(80, 80, 80);
   padding: 50px 25px;
+}
+
+#about_me,
+#home,
+#portfolio,
+#contact {
+  scroll-margin-top: 4rem;
 }
 
 .about_me_section_class h2 {
@@ -618,9 +626,7 @@ input {
 
   #navbar__logo {
     padding-left: 25px;
-    font-size: 1.5rem;
   }
-
   .navbar__toggle .bar {
     width: 25px;
     height: 3px;
@@ -686,10 +692,6 @@ input {
     padding: 10px 10px;
   }
 
-  .hero_text {
-    font-size: 2rem;
-  }
-
   .hero__heading {
     font-size: 1rem;
   }
@@ -705,7 +707,7 @@ input {
 
   h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   h2 {
@@ -713,10 +715,15 @@ input {
     text-align: center;
   }
 
+  h3 {
+    font-size: 1rem;
+  }
+
   .buttons {
     text-align: center;
     margin: 20px auto;
     display: block;
+    font-size: 20px;
   }
 
   .portfolio_heading {
