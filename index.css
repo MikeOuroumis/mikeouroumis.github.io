@@ -172,6 +172,19 @@ body {
   border-radius: 100%;
   border: solid #13131300;
   float: right;
+  animation-duration: 2s;
+  animation-name: photo;
+  transition: all 0.5s ease;
+}
+
+@keyframes photo {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .portrait:hover {
@@ -185,7 +198,6 @@ body {
 }
 
 .portrait {
-  transition: all 0.5s ease;
 }
 
 .hero_container {
@@ -217,6 +229,20 @@ body {
   font-size: 26px;
   margin: 25px auto;
   max-width: 300px;
+  animation-duration: 1.2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -200rem;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 
 .buttons a {
@@ -773,6 +799,18 @@ input {
     margin: 20px auto;
     display: block;
     font-size: 18px;
+    animation-duration: 4s;
+    animation-name: slideincenter;
+  }
+
+  @keyframes slideincenter {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .portfolio_heading {
