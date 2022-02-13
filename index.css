@@ -176,6 +176,7 @@ body {
   animation-duration: 2s;
   animation-name: photo;
   transition: all 0.5s ease;
+  transition-delay: 20s;
 }
 
 @keyframes photo {
