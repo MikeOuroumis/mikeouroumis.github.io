@@ -176,7 +176,7 @@ body {
   animation-duration: 2s;
   animation-name: photo;
   transition: all 0.5s ease;
-  transition-delay: 20s;
+  transition-delay: 0s;
 }
 
 @keyframes photo {
@@ -356,6 +356,9 @@ body {
 .bar .progress-line.ReactJS span {
   width: 70%;
 }
+.bar .progress-line.Wordpress span {
+  width: 90%;
+}
 .bar .progress-line.python span {
   width: 50%;
 }
@@ -402,6 +405,9 @@ body {
 }
 .progress-line.ReactJS span::after {
   content: "70%";
+}
+.progress-line.Wordpress span::after {
+  content: "90%";
 }
 .progress-line.python span::after {
   content: "40%";
@@ -484,6 +490,9 @@ body {
 .bar .progress-line-soft-skills.problem-solving span {
   width: 100%;
 }
+.bar .progress-line-soft-skills.accountability span {
+  width: 100%;
+}
 .bar .progress-line-soft-skills.empathy span {
   width: 100%;
 }
@@ -529,6 +538,9 @@ body {
   content: "100%";
 }
 .progress-line-soft-skills.problem-solving span::after {
+  content: "100%";
+}
+.progress-line-soft-skills.accountability span::after {
   content: "100%";
 }
 .progress-line-soft-skills.empathy span::after {
