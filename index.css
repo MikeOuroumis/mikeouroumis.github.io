@@ -1019,7 +1019,6 @@ input {
 
   .form_container {
     display: grid;
-    justify-content: center;
   }
 
   .skills-bars-container {
